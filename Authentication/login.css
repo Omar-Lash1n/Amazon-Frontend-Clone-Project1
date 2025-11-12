@@ -1,0 +1,132 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.logo img {
+  width: 100px;
+  margin: 20px auto;
+  display: block;
+}
+
+.box {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 320px;
+}
+
+h1 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+input {
+  width: 94%;
+  padding: 8px;
+  margin: 5px 0 15px 0;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+}
+
+button {
+  width: 100%;
+  background-color: #f0c14b;
+  border: 1px solid #a88734;
+  border-radius: 3px;
+  padding: 8px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e6b33d;
+}
+
+.help-text {
+  font-size: 0.8em;
+  color: #111;
+}
+
+.help-link {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+  text-decoration: none;
+  color: #0066c0;
+}
+
+.help-link:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  margin: 20px 0;
+  text-align: center;
+  position: relative;
+}
+
+.divider span {
+  background-color: #fff;
+  padding: 0 10px;
+  color: #555;
+}
+
+.divider::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.create-account-btn {
+  display: block;
+  text-align: center;
+  width: 320px;
+  padding: 8px;
+  background-color: #e7e9ec;
+  border: 1px solid #adb1b8;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #111;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+.create-account-btn:hover {
+  background-color: #d7dade;
+}
+footer {
+  text-align: center;
+  font-size: 0.8em;
+  color: #555;
+  border-top: 1px solid #ddd;
+  width: 100%;
+  padding: 20px 0;
+}
+footer a {
+  color: #0066c0;
+  text-decoration: none;
+  margin: 0 10px;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 400px) {
+  .box, .create-account-btn {
+    width: 90%;
+  }
+}
