@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Today's Deal</title>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./cat.css" />
+  </head>
+  <body>
+    <div id="body"></div>
+    <header>
+      <div class="logo-header">
+        <img src="images/amazon-logo.png" alt="amazon-logo" />
+      </div>
+
+      <div class="deliver">
+        <p>Deliver to</p>
+        <div class="location">
+          <span>
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD7klEQVR4nO2ZT2xVRRTGb8EiCdUEsNQEWVgUyMPWhFiqoSauTFhXo2JSqSGRFaGSyAbrqtUECmVhxIVWRRqChlJDDKyosCDSFd1Lq4sKJIX+ofaPL/mZCd9NJ7WdO+/eubYxnGSSm75vvvOdYeacM0MUPbL/iQFPA81AF9AP3AGmNG4DN/TbXqAqWi4GvAr0AtNA0XMY7AWgYSmFbwYuWqJmgCtAC7AT2ACUa5jveuBDoE/YeN5PQPV/LX4PMCoB40AbUFnCfBNQOzAhjvvA2/mqnnP+sbV63cDGDFzPAGctviNh1f7bYasc/a3vskC8B4DZXIPQtinKUWMO/G9YQbyVx4GN9/xHQcktAw5bZ+LZKJRZ2aY7GOnCfsqsM9EbMs8XlTESDyxQADqAAWBMY0B/K3ge7An53BUigF6RtSXgVgEn5+X4+cP81mmwCVztwveEaA+m5bgyQfxlOX0AHAfqgDUaprCdACaFuewKgod1YkZtyIYsATTL4ZUE3EnhBoEXHLhaYEjYzgTOX4R7L0sAXSJpSdjzM1r5RcXPC2JScwoO3CH5/ipLAP0iqXdgOoTpKIG3U3OOOTCvCPNrGu0xyR2RuPb/gDAvlcC7U3NuOjBVwvyZRntM8pdIXAcuLnAVJfBWxAUrWhzzuDCTabTHJOMiWePA3E8RwJOac8+BeUKYsTTaY5JbInneYwvVlcBb77GFtgrzWxrtMcnPInnH4xCfKIE3TrtHPZrHi2m0xySfiOSURxo1qbHWg/NFna2kNPqlfLdmCSBOZcPASo+0OOQKQuJ/F/a4A/eYHgKcKdwngBXAHyJ63YErt1qJSQVUr2xjxsvaNnFWM9hyB99ua0GyXZqAz0R2PgG3SsJdzdy0+qTyBK4LPg2kbwDVuikZYZs98OZMHDMZRjViVN9HPdvp5+RrNtilBvhBK/J1EEK3r2/k61xI0oL1r7AtGPE8A7ZomxlfNVFIA05rZb4LSmwZcEY+vo1Cm6nG1upsz4G/RtxTPmctrZMvtEJ9od6ErMv8VXF/HuVlwDoVNePo/YC8+8RpitdToXgXc/aunN3NdF+d41tvVd09YVQmO70U6rAxlzYvhVHn/1IX3xXezPicWNQ7UD4H1+F8v5yPpKmYwCZtQ8PxQT4qk0V0S8D1pP5mgW7zmub+mK/K5Kw0KCHtJcz7VHNuAWvzVZkspsH6/7EmD3yTsKZgZX/7DGGmJliiXnPgdlnPi/uj5WRql4t6Syos0hDeTroLL5np9tZjVdQd1m87LPE9ruvpkpoeo85b6bVRY8QSvzpazgasNA+yC1wnvy8l1S6H7XRQjd+wvlcsrapHFuVi/wBObPTDoTF+YQAAAABJRU5ErkJggg=="
+              alt="location"
+          /></span>
+          <h3>Egypt</h3>
+        </div>
+      </div>
+      <div class="search">
+        <select
+          name="all"
+          id="all-select"
+          size="1"
+          class="all"
+          title="Search categories"
+          aria-label="Search categories"
+        ></select>
+
+        <input
+          type="text"
+          placeholder="Search Amazon"
+          class="search-input"
+          id="search"
+        />
+        <button class="search-logo" onclick="searchProducts()" title="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <div class="lang">
+        <img src="images/AmericanFlag.svg.png" alt="AmericanFlag" />
+        <h3>EN</h3>
+        <span class="down"><i class="fa-solid fa-caret-down"></i></span>
+      </div>
+
+      <div class="sign-in">
+        <a href="sign-in.html">Hello, sign-in</a>
+        <h3>
+          Accounts & Lists
+          <span class="down"><i class="fa-solid fa-caret-down"></i></span>
+        </h3>
+      </div>
+
+      <div class="return">
+        <p>returns</p>
+        <h3>& Orders</h3>
+      </div>
+      <div class="cart">
+        <span class="numOfCart">0</span>
+        <span><img src="images/cartLogo.png" alt="cartLogo" /></span>
+        <h4>Cart</h4>
+      </div>
+    </header>
+    <!-- =================  Nav Bar  ==================== -->
+    <nav>
+      <ul class="nav-bar">
+        <li class="all-toggler open">
+          <i class="fa-solid fa-bars humb  "></i>All
+        </li>
+        <!-- toggle  -->
+        <a href="#"><li>Today's Deals</li></a>
+        <a href="#"><li>Customer Service</li></a>
+        <a href="#"><li>Registry</li></a>
+        <a href="#"><li>Gifts Cards</li></a>
+        <a href="#"><li>Sell</li></a>
+      </ul>
+      <!-- --------  Side bar  -------- -->
+      <button class="close hide" type="button" title="Close sidebar">
+        <i class="fa-solid fa-x"></i>
+      </button>
+      <div class="sideBar hide">
+        <div class="hello">
+          <span><i class="fa-solid fa-user"></i></span>
+          <h2><a href="sign-in.html">Hello, sign in</a></h2>
+        </div>
+
+        <h3>Digital content & Devices</h3>
+        <ul class="list-side">
+          <a href="#"
+            ><li>Amazon Musics <i class="fa-solid fa-chevron-right"></i></li
+          ></a>
+          <a href="#"
+            ><li>
+              Kandile & E-read boos
+              <i class="fa-solid fa-chevron-right"></i></li
+          ></a>
+          <a href="#"
+            ><li>Amazon Appstore <i class="fa-solid fa-chevron-right"></i></li
+          ></a>
+        </ul>
+        <span class="line-divesion"></span>
+        <h3>Shop by Department</h3>
+        <ul class="list-side">
+          <a href="#"
+            ><li>Electronics <i class="fa-solid fa-chevron-right"></i></li
+          ></a>
+          <a href="#"
+            ><li>Computers <i class="fa-solid fa-chevron-right"></i></li
+          ></a>
+          <a href="#"
+            ><li>Smart Home <i class="fa-solid fa-chevron-right"></i></li
+          ></a>
+          <a href="#"
+            ><li>Arts & Crafts <i class="fa-solid fa-chevron-right"></i></li
+          ></a>
+          <button type="button" class="see-all">
+            See All <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </ul>
+        <span class="line-divesion"></span>
+        <h3>Programs & Features</h3>
+        <ul class="list-side">
+          <a href="#"
+            ><li>Gift & Cards <i class="fa-solid fa-chevron-right"></i></li
+          ></a>
+          <a href="#"
+            ><li>Shop by Interst <i class="fa-solid fa-chevron-right"></i></li
+          ></a>
+          <a href="#"
+            ><li>Amazon Live <i class="fa-solid fa-chevron-right"></i></li
+          ></a>
+          <a href="#"
+            ><li>
+              International Shopping<i
+                class="fa-solid fa-chevron-right"
+              ></i></li
+          ></a>
+          <button type="button" class="see-all">
+            See All <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </ul>
+        <span class="line-divesion"></span>
+
+        <h3>Help & Setting</h3>
+        <ul class="sett">
+          <a href="#"><li>Your Account</li></a>
+          <a href="#">
+            <li><i class="fa-solid fa-globe"></i>English</li>
+          </a>
+          <a href="#"
+            ><li>
+              <img
+                src="images/AmericanFlag.svg.png"
+                alt="AmericanFlag"
+                class="flag2"
+              />United State
+            </li></a
+          >
+          <a href="#"><li>Customer Service</li></a>
+          <a href="sign-in.html"><li>Sign in</li></a>
+        </ul>
+      </div>
+    </nav>
+    <!-- =============== End of Header ========================= -->
+    <section class="sec-1">
+      <div class="todayDeal">
+        <ul>
+          <a href="#"><li>Today's Deal</li></a>
+          <a href="#"><li>Coupons</li></a>
+          <a href="#"><li>Renewed Deals</li></a>
+          <a href="#"><li>Outlet</li></a>
+          <a href="#"><li>Amazon Resale</li></a>
+          <a href="#"><li>Grocery Deals</li></a>
+        </ul>
+      </div>
+    </section>
+    <section class="sec-2">
+      <button id="left-btn" title="left">
+        <i class="fa-solid fa-angle-left"></i>
+      </button>
+      <div class="scroll-container">
+        <ul id="Suggested-Ctegories"></ul>
+      </div>
+      
+      <button id="right-btn" title="right">
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
+    </section>
+
+    <section class="sec3 container">
+      <aside class="sidebar-categories">
+        <div>
+          <h3>Department</h3>
+          <ul id="categoryList"></ul>
+        </div>
+        <div>
+          <h3>Brand</h3>
+          <ul id="brandList"></ul>
+        </div>
+        
+      </aside>
+      <main class="products" id="product-list">
+        <!-- Products will be injected here -->
+      </main>
+    </section>
+    <!-- sign in section -->
+      <section class="sec-4">
+      <div class="sign-in2">
+        <h3 class="rec-sign-in">See personalized recommendations</h3>
+        <a href="sign-in.html"><button class="btn-sign">Sign in</button></a>
+        <p>New customer?<a href="sign-in.html">start here</a></p>
+      </div>
+    </section>
+    <!-- ==================== footer ======================== -->
+    <footer>
+      <div class="backTop" onclick="topFunction()" id="topButton">
+        <p title="Go to top" type="button">Back to top</p>
+      </div>
+      <div class="foot-1">
+        <div>
+          <h3>Get to Know Us</h3>
+          <ul>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About Amazon</a></li>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">Amazon Devices</a></li>
+            <li><a href="#">Amazon Science</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Make Money with Us</h3>
+          <ul>
+            <li><a href="#">Sell products on Amazon</a></li>
+            <li><a href="#">Sell on Amazon Business</a></li>
+            <li><a href="#">Sell apps on Amazon</a></li>
+            <li><a href="#">Become an Affiliate</a></li>
+            <li><a href="#">Advertise Your Products</a></li>
+            <li><a href="#">Self-Publish with Us</a></li>
+            <li><a href="#">Host an Amazon Hub</a></li>
+            <li><a href="#">›See More Make Money with Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Amazon Payment Products</h3>
+          <ul>
+            <li><a href="#">Amazon Business Card</a></li>
+            <li><a href="#">Shop with Points</a></li>
+            <li><a href="#">Reload Your Balance</a></li>
+            <li><a href="#">Amazon Currency Converter</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Let Us Help You</h3>
+          <ul>
+            <li><a href="#">Amazon and COVID-19 </a></li>
+            <li><a href="#">Amazon and COVID-19 </a></li>
+            <li><a href="#">Amazon and COVID-19 </a></li>
+            <li><a href="#">Your Account </a></li>
+            <li><a href="#">Your Orders </a></li>
+            <li><a href="#">Shipping Rates & Policies </a></li>
+            <li><a href="#">Returns & Replacements </a></li>
+            <li><a href="#">Manage Your Content and Devices </a></li>
+            <li><a href="#">Help</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr />
+      <div class="foot-1-2">
+        <div class="logo-footer">
+          <img src="images/amazon-logo.png" alt="logo" />
+        </div>
+
+        <div>
+          <i class="fa-solid fa-globe" aria-hidden="true"></i>
+          <p>English</p>
+        </div>
+        <div href="#">
+          <span>$</span>
+          <p>USD-U.S.Dollar</p>
+        </div>
+        <div>
+          <img
+            src="images/AmericanFlag.svg.png"
+            alt="flag"
+            class="flag-footer"
+          />
+          <p>United States</p>
+        </div>
+      </div>
+      <div class="footer-wrapper">
+        <div class="footer-container">
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">Amazon Ads</p>
+              <p class="pf2">Reach customers wherever they spend their time</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">6pm</p>
+              <p class="pf2">Score deals on fashion brands</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">ACX</p>
+              <p class="pf2">Audiobook Publishing Made Easy</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">AbeBooks</p>
+              <p class="pf2">Books, art & collectibles</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">Sell on Amazon</p>
+              <p class="pf2">Start a Selling Account</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">Amazon Business</p>
+              <p class="pf2">Everything For Your Business</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">AmazonGlobal</p>
+              <p class="pf2">Ship Orders Internationally</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">Amazon Web Services</p>
+              <p class="pf2">Scalable Cloud Computing Services</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">Home Services</p>
+              <p class="pf2">Experienced Pros Happiness Guarantee</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">Audible</p>
+              <p class="pf2">Listen to Books & Original Audio Performances</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">Box Office Mojo</p>
+              <p class="pf2">Find Movie Box Office Data</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">Goodreads</p>
+              <p class="pf2">Book reviews & recommendations</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">IMDb</p>
+              <p class="pf2">Movies, TV & Celebrities</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">IMDbPro</p>
+              <p class="pf2">Get Info Entertainment Professionals Need</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">Kindle Direct Publishing</p>
+              <p class="pf2">Indie Digital & Print Publishing Made Easy</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">Prime Video Direct</p>
+              <p class="pf2">Video Distribution Made Easy</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">Shopbop</p>
+              <p class="pf2">Designer Fashion Brands</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">Woot!</p>
+              <p class="pf2">Deals and Shenanigans</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">Zappos</p>
+              <p class="pf2">Shoes & Clothing</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">Ring</p>
+              <p class="pf2">Smart Home Security Systems</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">eero WiFi</p>
+              <p class="pf2">Stream 4K Video in Every Room</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">Blink</p>
+              <p class="pf2">Smart Security for Every Home</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">Neighbors App</p>
+              <p class="pf2">Real-Time Crime & Safety Alerts</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">Amazon Subscription Boxes</p>
+              <p class="pf2">Top subscription boxes – right to your door</p>
+            </a>
+          </div>
+          <div class="footer-item">
+            <a href="#">
+              <p class="pf1">PillPack</p>
+              <p class="pf2">Pharmacy Simplified</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="finalll">
+        <a href="#">Conditions of Use</a>
+        <a href="#">Privacy Notice</a>
+        <a href="#">Consumer Health Data Privacy Disclosure</a>
+        <a href="#"
+          >Your Ads Privacy Choices
+          <!-- <img src="images/privecy-footer.png" alt="" class="privecy-footer"/>  --></a
+        >
+      </div>
+      <div class="owner">
+        <p>© 1996-2024, Amazon.com, Inc. or its affiliates</p>
+      </div>
+    </footer>
+    <!-- <script src="expand.js"> -->
+    </script>
+    <script src="cat.js"></script>
+  </body>
+</html>

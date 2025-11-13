@@ -1,0 +1,670 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+body {
+  font-family: "Roboto", sans-serif;
+  /* background: #efefef; */
+}
+a {
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+}
+.logo-of-title {
+  border-radius: 10px;
+}
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #131921;
+  color: white;
+  width: 100%;
+  height: 60px;
+  padding: 1%;
+  position: relative;
+  /* letter-spacing: 1px; */
+}
+header h4 {
+  font-size: 15px;
+}
+header p {
+  font-size: 13px;
+}
+.logo-header {
+  display: flex;
+  align-items: center;
+  margin: 0px 5px;
+}
+.logo-header img {
+  width: 95px;
+  height: 33px;
+  margin-top: 15px;
+}
+/* ===================================================== */
+.deliver {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px;
+  width: 70px;
+  border: solid 1px #131921;
+  padding: 2px;
+}
+/* ===================================================== */
+.deliver:hover {
+  border: solid 1px #cccccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.deliver i {
+  margin-right: 9px;
+  font-size: 20px;
+}
+.deliver p {
+  color: #cccccc;
+  font-size: 11px;
+}
+.location {
+  display: flex;
+  margin-left: -20px;
+}
+.location img {
+  width: 20px;
+  height: 20px;
+  margin-right: 1px;
+}
+/* ======================================================= */
+.all {
+  background-color: #dedcdc;
+  font-size: 12px;
+  color: rgb(153, 152, 152);
+  width: 55px;
+  height: 40px;
+  border: none;
+  border-right: rgb(165, 165, 165) solid 1px;
+  border-radius: 5px 0px 0px 5px;
+  /* padding: 1%; */
+}
+.all:hover {
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+.all:focus {
+  outline: medium solid #f6a233;
+}
+.search {
+  display: flex;
+  width: 70%;
+}
+.search-input:focus + .search {
+  outline: medium solid #f6a233;
+  border-radius: 3px;
+}
+.search-input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border: white solid 1px;
+  padding: 2%;
+  font-size: 14px;
+}
+.search-logo {
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+}
+.search-logo i {
+  color: #131921;
+  font-size: 20px;
+  background-color: #fdbd68;
+  width: 50px;
+  height: 40px;
+  border: none;
+  border-radius: 0px 5px 5px 0px;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-logo i:hover {
+  background-color: #f6a233;
+}
+/* ====================================================== */
+.lang img {
+  width: 20px;
+  height: 13px;
+  margin-top: 5px;
+  margin-left: 7px;
+}
+.lang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  gap: 3px;
+  padding: 2px;
+  max-width: 150px;
+  border: solid 1px #131921;
+}
+.lang:hover {
+  height: 40px;
+  border: solid 1px #cccccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.down i {
+  color: #dedcdc;
+  font-size: 14px;
+  margin-top: 6px;
+  margin-right: 20px;
+}
+/* ================================ */
+.sign-in {
+  border: solid 1px #131921;
+  font-size: 13px;
+  padding: 2px;
+  width: 220px;
+}
+.sign-in:hover {
+  border: solid 1px #cccccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+/* ======================================================= */
+.return {
+  display: flex;
+  font-size: 14px;
+  flex-direction: column;
+  justify-content: start;
+  width: 100px;
+  border: solid 1px #131921;
+}
+.return:hover {
+  border: solid 1px #cccccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.cart {
+  display: flex;
+  margin-left: 30px;
+  padding-right: 2px;
+  border: solid 1px #131921;
+}
+.cart:hover {
+  border: solid 1px #cccccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.cart h4 {
+  margin-top: 17px;
+  padding-left: 5px;
+}
+.cart img {
+  max-width: 50px;
+  height: 35px;
+}
+.numOfCart {
+  position: absolute;
+  right: 63px;
+  color: #f6a233;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* -------------------------   End Of Header   ---------------------------- */
+/* =========================  Start Of Nav Bar  ============================ */
+.nav-bar {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  background-color: #232f3f;
+  color: white;
+  height: 40px;
+  padding: 1%;
+}
+nav a {
+  padding: 5px 5px;
+  font-size: 14px;
+  margin: 0px 6px;
+}
+.nav-bar a {
+  border: solid 1px #232f3f;
+}
+.nav-bar a:hover {
+  border: solid 1px #cccccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.humb {
+  margin: 0px 6px;
+  color: white;
+  font-size: 20px;
+}
+.humb:hover {
+  cursor: pointer;
+}
+/* --------  Side Bar  -------- */
+.sideBar {
+  overflow: scroll;
+  max-height: 100vh;
+  position: absolute;
+  background-color: white;
+  color: black;
+  top: 0%;
+  width: 26%;
+  z-index: 9999;
+  /* position: relative; */
+}
+.sideBar :not(.hello) {
+  padding-left: 5%;
+}
+.sideBar a {
+  color: black;
+}
+.sideBar ul {
+  list-style-type: none;
+}
+.sideBar h3 {
+  margin: 2% 0%;
+}
+.hello {
+  background-color: #232f3f;
+  color: white;
+  display: flex;
+  position: sticky;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+}
+.hello span {
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  padding-left: 5px !important;
+  border-radius: 50%;
+  padding: 3px 6px;
+  margin-left: 20px;
+}
+.list-side a li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 3%;
+}
+.hello span i {
+  color: #232f3f;
+  text-align: center;
+}
+.hello h2 a {
+  color: white;
+  font-size: 23px;
+}
+.close {
+  position: absolute;
+  left: 27%;
+  top: 3%;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 999;
+}
+.line-divesion {
+  margin-left: 3%;
+  width: 90%;
+  height: 0%;
+  border: 0.01px solid #cccccc;
+  box-sizing: initial;
+  float: left;
+  margin: 5px 0px;
+}
+.sideBar ul li i {
+  margin-right: 5%;
+  color: gray;
+}
+.see-all {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  white-space: nowrap;
+  margin: 5px 0px;
+}
+.see-all i {
+  margin: 0px 5px;
+}
+.sett li i,
+.sett li img {
+  margin-right: 5px;
+  margin-left: -10px;
+}
+.sett li {
+  display: flex;
+  align-items: center;
+}
+.flag2 {
+  width: 30px;
+  height: 20x;
+}
+/* -- hide class -- */
+.hide {
+  display: none;
+}
+.black-opacity {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.7;
+  position: absolute;
+  z-index: 1;
+}
+/* ------------------  End Of Nav Bar  ----------------- */
+/* ===================================================== */
+/* sec-1 */
+.todayDeal ul {
+  display: flex;
+  gap: 20px;
+  background-color: #fafafa;
+  border-bottom: #cacaca solid 0.2px;
+  padding-left: 20px;
+}
+.todayDeal ul li {
+  list-style: none;
+  padding: 5px 0px;
+  cursor: pointer;
+}
+.todayDeal ul a {
+  color: #5b5b5b;
+  font-size: smaller;
+}
+/* sec-2 */
+.sec-2 {
+  display: flex;
+  justify-content: center;
+  padding: 1.5%;
+  position: relative;
+  width: 95%;
+  margin: auto;
+}
+.sec-2 button {
+  background: transparent;
+  padding:15px 15px;
+  font-size: 20px;
+  border: solid rgb(174, 173, 173) 0.3px;
+  border-radius: 7px;
+}
+.sec-2 ul {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  list-style: none;
+  overflow-x: auto; 
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.scroll-container{
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.suggested {
+  border: solid #9f9d9d 0.3px;
+  color: #454545;
+  border-radius: 7px;
+  white-space: nowrap;
+  padding:15px 5px;
+  height: 55px;
+  /* max-width: fit-content; */
+}
+/* =============== Start of the main page ============== */
+
+/* Layout */
+.container {
+  display: flex;
+}
+.sidebar-categories {
+  width: 13%;
+  background: white;
+  padding: 15px;
+
+
+    position: sticky;
+  top: 0; /* يعني يثبت أول ما يوصل لأعلى الصفحة */
+  max-height: 100vh; /* علشان ما يطلعش بره الشاشة */
+  overflow-y: auto;
+  /* border-right: 1px solid #ddd; */
+}
+.sidebar-categories h3 {
+  margin-top: 0;
+}
+.sidebar-categories ul {
+  list-style: none;
+  padding: 0;
+}
+.sidebar-categories li {
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+/* Products */
+.products {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+.product {
+  width: 16%;
+  max-height:280px ;
+  background: white;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.product:hover {
+  cursor: pointer;
+}
+.product img {
+  background-color: #f5f5f5;
+  max-width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+.product-title {
+  margin: 10px 0;
+  font-size: 16px;
+}
+.product-price {
+  text-align: start;
+  padding: 0 30px;
+}
+.product:hover .product-title{
+  color: #bc6f0b;
+}
+/* ========================= */
+/* sign in section  */
+.sec-4 {
+  background-color: white;
+  margin: 10px 0px;
+  padding: 50px 7px;
+  margin-bottom: 0%;
+  display: flex;
+  align-items: center;
+}
+.sec-4 p {
+  font-size: 14px;
+  margin: 10px;
+}
+.sign-in2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top: 1px solid rgb(198, 195, 195);
+  border-bottom: 1px solid rgb(198, 195, 195);
+  border-radius: 10px;
+  height: 110px;
+  width: 100%;
+  padding: 90px 0;
+}
+.sign-in2 h3{
+  font-size: 25px;
+  margin: 18px 0;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.btn-sign {
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background: #FFD814;
+  color: #131921;
+  font-size: 17px;
+  letter-spacing: 1px;
+  padding: 8px 100px;
+}
+.btn-sign:hover{
+  background-color:#FFCE12 ;
+}
+.sec-4 a {
+  color: rgb(112, 136, 208);
+  font-size: 13px;
+}
+.sec-4 a:hover {
+  color: rgb(210, 49, 49);
+  transition: 0.2s;
+}
+/* =======  footer ========= */
+.foot-1 {
+  padding: 30px;
+  background-color: #232f3f;
+  display: flex;
+  justify-content: space-around;
+  color: rgb(234, 234, 234);
+  line-height: 24px;
+}
+.foot-1 ul {
+  list-style-type: none;
+}
+.foot-1 a {
+  color: #cccccc;
+  font-size: 14px;
+}
+.foot-1 a:hover {
+  text-decoration: underline;
+}
+/* ================ */
+.logo-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px 0 20px;
+}
+.logo-footer img {
+  width: 90px;
+  margin-right: 40px;
+}
+.flag-footer {
+  width: 20px;
+  height: 15px;
+}
+
+.foot-1-2 {
+  background-color: #232f3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.foot-1-2 div:not(.logo-footer) {
+  border: 0.5px solid #cccccc;
+  border-radius: 3px;
+  margin: 20px 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+  color: #cccccc;
+}
+.foot-1-2 div:not(.logo-footer):hover {
+  cursor: pointer;
+}
+
+/* ===== foot 2 ========= */
+.footer-container {
+  background-color: #131a22;
+  color: #d5d0d0;
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 220px;
+}
+.footer-item {
+  margin: 0 auto;
+}
+.footer-item a {
+  color: #ddd;
+  text-decoration: none;
+  white-space: wrap;
+  text-align: left;
+}
+.footer-item a:hover {
+  text-decoration: underline;
+}
+
+.footer-item .pf1 {
+  font-size: 12px;
+  color: rgb(234, 227, 227);
+}
+
+.footer-item .pf2 {
+  font-size: 11px;
+  color: #aeacac;
+}
+.finalll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #131a22;
+}
+.finalll a {
+  font-size: 12px;
+  margin: 7px;
+  color: #ddd;
+}
+.finalll a:hover {
+  text-decoration: underline;
+}
+.owner {
+  display: flex;
+  color: #ddd;
+  justify-content: center;
+  align-items: center;
+  background-color: #131a22;
+  margin-top: -20px;
+  padding-bottom: 10px;
+  font-size: 13px;
+}
+.backTop {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #304156;
+  padding: 15px;
+  font-size: 14;
+}
+.backTop:hover {
+  opacity: 0.8;
+  transition: 0.5s;
+  cursor: pointer;
+}
