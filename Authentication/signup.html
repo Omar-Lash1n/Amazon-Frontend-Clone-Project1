@@ -1,47 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amazon Registration</title>
-  <link rel="stylesheet" href="signup.css">
-</head>
-<body>
-  <div class="container">
-    <div class="logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Registration</title>
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+          alt="Amazon Logo"
+        />
+      </div>
+
+      <div class="box">
+        <h1>Create account</h1>
+        <form id="registerForm" action="login.html">
+          <label>Your name</label>
+          <input type="text" id="name" required />
+          <label>Email</label>
+          <input type="email" id="email" required />
+          <label>Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="At least 8 characters"
+            required
+          />
+          <label>Re-enter password</label>
+          <input type="password" id="repassword" required />
+          <input type="submit" value="Continue" id="submit" />
+          <!-- <button type="button" onclick="window.location.href=''">Continue</button> -->
+          <p class="help-text">
+            By creating an account, you agree to Amazon's
+            <a href="#">Conditions of Use</a> and
+            <a href="#">Privacy Notice</a>.
+          </p>
+        </form>
+      </div>
+
+      <div class="divider">
+        <span>Already have an account?</span>
+      </div>
+
+      <a href="login.html" class="create-account-btn">Sign in</a>
     </div>
 
-    <div class="box">
-      <h1>Create account</h1>
-      <form id="registerForm">
-        <label>Your name</label>
-        <input type="text" id="name" required>
-        <label>Email</label>
-        <input type="email" id="email" required>
-        <label>Password</label>
-        <input type="password" id="password" placeholder="At least 8 characters" required>
-        <label>Re-enter password</label>
-        <input type="password" id="repassword" required>
-        <button type="button" onclick="window.location.href='home.html'">Continue</button>
-        <p class="help-text">By creating an account, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.</p>
-      </form>
-    </div>
+    <footer>
+      <a href="#">Conditions of Use</a>
+      <a href="#">Privacy Notice</a>
+      <a href="#">Help</a>
+      <p>© 1996–2025, Amazon.com, Inc. or its affiliates</p>
+    </footer>
 
-    <div class="divider">
-      <span>Already have an account?</span>
-    </div>
-
-    <a href="login.html" class="create-account-btn">Sign in</a>
-  </div>
-
-  <footer>
-    <a href="#">Conditions of Use</a>
-    <a href="#">Privacy Notice</a>
-    <a href="#">Help</a>
-    <p>© 1996–2025, Amazon.com, Inc. or its affiliates</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -48,6 +48,16 @@ button {
   cursor: pointer;
 }
 
+#submit{
+  background-color: #f0c14b;
+  border: 1px solid #a88734;
+  border-radius: 3px;
+  padding: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+}
+
 button:hover {
   background-color: #e6b33d;
 }
