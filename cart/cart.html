@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon - Your Cart & Orders</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="./cart.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">
+            <i class="fab fa-amazon"></i>amazon
+        </a>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Amazon">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <div class="nav-links">
+            <a href="#"><i class="fas fa-user"></i> Account & Lists</a>
+            <a href="#"><i class="fas fa-box"></i> Returns & Orders</a>
+            <a href="#" class="cart-link"><i class="fas fa-shopping-cart"></i> Cart</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Cart & Orders Tabs -->
+        <div id="main-tabs">
+            <h1 class="page-title">Your Amazon Cart & Orders</h1>
+            
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab active" data-tab="cart">Shopping Cart (3)</div>
+                <div class="tab" data-tab="orders">Your Orders (5)</div>
+            </div>
+
+            <!-- Cart Section -->
+            <div id="cart" class="tab-content active">
+                <div class="cart-container">
+                    <div class="cart-header">
+                        <div class="cart-title">Shopping Cart</div>
+                        <div class="price-title">Price</div>
+                    </div>
+                    <div class="cart-item">
+                        <img src="data:image/jpeg;base64,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" alt="Product" class="item-image">
+                        <div class="item-details">
+                            <h3 class="item-title">Apple iPhone 14 Pro Max, 256GB, Deep Purple - Unlocked (Renewed Premium)</h3>
+                            <div class="item-stock">In Stock</div>
+                            <div class="quantity-selector">
+                                <label for="quantity">Qty:</label>
+                                <select id="quantity">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                            <div class="item-actions">
+                                <a class="delete-item">Delete</a>
+                                <a class="save-later">Save for later</a>
+                                <a>Compare with similar items</a>
+                            </div>
+                        </div>
+                        <div class="item-price-col">
+                            <div class="item-price">$999.99</div>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4QaRqKWxfrGdQ9r5U5mWg-RWItNxzmphX-Q&s" alt="Product" class="item-image">
+                        <div class="item-details">
+                            <h3 class="item-title">Samsung 49" Odyssey G9 Gaming Monitor, 1000R Curved Screen, 240Hz</h3>
+                            <div class="item-stock">In Stock</div>
+                            <div class="quantity-selector">
+                                <label for="quantity">Qty:</label>
+                                <select id="quantity">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                            <div class="item-actions">
+                                <a class="delete-item">Delete</a>
+                                <a class="save-later">Save for later</a>
+                                <a>Compare with similar items</a>
+                            </div>
+                        </div>
+                        <div class="item-price-col">
+                            <div class="item-price">$1,099.99</div>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <img src="data:image/jpeg;base64,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" alt="Product" class="item-image">
+                        <div class="item-details">
+                            <h3 class="item-title">Sony WH-1000XM4 Wireless Noise-Canceling Over-Ear Headphones</h3>
+                            <div class="item-stock">In Stock</div>
+                            <div class="quantity-selector">
+                                <label for="quantity">Qty:</label>
+                                <select id="quantity">
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                            </div>
+                            <div class="item-actions">
+                                <a class="delete-item">Delete</a>
+                                <a class="save-later">Save for later</a>
+                                <a>Compare with similar items</a>
+                            </div>
+                        </div>
+                        <div class="item-price-col">
+                            <div class="item-price">$348.00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary">
+                    <div class="summary-line">
+                        <span>Subtotal (3 items):</span>
+                        <span>$2,447.98</span>
+                    </div>
+                    <div class="total">
+                        <span>Total:</span>
+                        <span>$2,447.98</span>
+                    </div>
+                    <button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+
+            <!-- Orders Section -->
+            <div id="orders" class="tab-content">
+                <div class="orders-container">
+                    <div class="order-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8q6wZPYuvZhXPCbo42ZYPzc-N9s4eHmkQvw&s" alt="Product" class="item-image">
+                        <div class="item-details">
+                            <div class="order-header">
+                                <div class="order-date">ORDER PLACED: August 15, 2023</div>
+                                <div class="order-total">TOTAL: $129.99</div>
+                            </div>
+                            <h3 class="item-title">Apple AirPods Pro (2nd Generation) with MagSafe Case</h3>
+                            <div class="order-status delivered">Delivered Aug 17, 2023</div>
+                            <button class="buy-again-btn">Buy it again</button>
+                        </div>
+                    </div>
+
+                    <div class="order-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCytP-1BGm9A9fFyUasMQomk7R4eKnPCRQQA&s" alt="Product" class="item-image">
+                        <div class="item-details">
+                            <div class="order-header">
+                                <div class="order-date">ORDER PLACED: August 10, 2023</div>
+                                <div class="order-total">TOTAL: $599.99</div>
+                            </div>
+                            <h3 class="item-title">Apple iPad Air (5th Generation) with A14 Bionic Chip, 10.9-inch</h3>
+                            <div class="order-status delivered">Delivered Aug 12, 2023</div>
+                            <button class="buy-again-btn">Buy it again</button>
+                        </div>
+                    </div>
+
+                    <div class="order-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv2T5giokNY_TM77ObVOP7y9qrCsY9xirOoQ&s" alt="Product" class="item-image">
+                        <div class="item-details">
+                            <div class="order-header">
+                                <div class="order-date">ORDER PLACED: August 5, 2023</div>
+                                <div class="order-total">TOTAL: $89.99</div>
+                            </div>
+                            <h3 class="item-title">Amazon Echo Dot (4th Gen) | Smart speaker with Alexa</h3>
+                            <div class="order-status delivered">Delivered Aug 7, 2023</div>
+                            <button class="buy-again-btn">Buy it again</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Checkout Page (Hidden by default) -->
+        <div id="checkout-page" style="display: none;">
+            <a class="back-to-cart" id="back-to-cart">&larr; Back to Cart</a>
+            <h1 class="page-title">Checkout</h1>
+            
+            <div class="checkout-container">
+                <h2 class="checkout-title">Shipping Address</h2>
+                <form class="checkout-form">
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" placeholder="Enter your street address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" placeholder="Enter your city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <select id="state" required>
+                            <option value="">Select State</option>
+                            <option value="CA">California</option>
+                            <option value="TX">Texas</option>
+                            <option value="NY">New York</option>
+                            <option value="FL">Florida</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">ZIP Code</label>
+                        <input type="text" id="zip" placeholder="Enter ZIP code" required>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="payment">Payment Method</label>
+                        <select id="payment" required>
+                            <option value="">Select Payment Method</option>
+                            <option value="credit">Credit Card</option>
+                            <option value="debit">Debit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="amazon">Amazon Pay</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="place-order-btn">Place Your Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#">Careers</a>
+            <a href="#">Blog</a>
+            <a href="#">About Amazon</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Amazon Devices</a>
+            <a href="#">Amazon Science</a>
+        </div>
+        <div class="copyright">
+            <p>© 1996-2023, Amazon.com, Inc. or its affiliates</p>
+        </div>
+    </footer>
+
+    <script src="./cart.js"></script>
+</body>
+</html>
